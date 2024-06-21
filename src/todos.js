@@ -11,4 +11,8 @@ function deleteTodo(projectName, index) {
   projects[projectName].splice(index, 1);
 }
 
-export { createTodo, deleteTodo };
+function editTodo(projectName, index, propertyToEdit, newValue) {
+  projects[projectName][index][propertyToEdit] = newValue;
+}
+
+export { createTodo, deleteTodo, editTodo };
