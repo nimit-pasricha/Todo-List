@@ -15,9 +15,9 @@ function deleteTodo(projectName, index) {
   projects[projectName].splice(index, 1);
 }
 
-function editTodo(projectName, index, propertyToEdit, newValue) {
-  const todoToEdit = getTodo(projectName, index);
-  todoToEdit[propertyToEdit] = newValue;
+function editTodo(projectName, index, newTitle, newDescription, newDueDate, newPriority) {
+  deleteTodo(projectName, index);
+  createTodo(newTitle, newDescription, newDueDate, newPriority, projectName);
 }
 
 function changeCompletedStatus(projectName, index) {
