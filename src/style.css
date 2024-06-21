@@ -27,7 +27,7 @@ body {
   grid-template-columns: 1fr 4fr;
 }
 
-header {
+h1 {
   display: flex;
   justify-content: left;
   align-items: center;
