@@ -39,7 +39,11 @@ header {
 .sidebar {
   background-color: var(--sidebar-background-color);
   padding: 24px;
-  color: var(--sidebar-font-color)
+  color: var(--sidebar-font-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 48px;
 }
 
 .user-info {
@@ -92,4 +96,8 @@ li>button:hover {
 li {
   list-style: none;
   font-size: 1.1rem;
+}
+
+.projects {
+  margin-bottom: auto;
 }
