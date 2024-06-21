@@ -13,7 +13,7 @@ function deleteProject(projectName) {
 }
 
 function changeProjectName(oldProjectName, newProjectName) {
-  projects.newProjectName = projects.oldProjectName;
+  projects[newProjectName] = projects[oldProjectName];
   delete projects[oldProjectName];
 }
 
