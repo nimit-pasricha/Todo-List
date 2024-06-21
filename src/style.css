@@ -64,8 +64,7 @@ header {
   padding: 4px;
 }
 
-.add-task-button,
-li>button {
+.sidebar button {
   background-color: var(--sidebar-background-color);
   color: var(--sidebar-font-color);
   border-radius: 4px;
@@ -74,21 +73,15 @@ li>button {
   width: 100%;
 }
 
-li>button {
-  display: flex;
-  justify-content: left;
-}
 
 .add-task-button {
   border: solid var(--sidebar-font-color) 2px;
   font-size: 1.2rem;
-  width: 100%;
   font-weight: 600;
   transition: 0.2s;
 }
 
-.add-task-button:hover,
-li>button:hover {
+.sidebar button:hover {
   background-color: var(--sidebar-font-color);
   color: var(--sidebar-background-color);
 }
@@ -100,4 +93,10 @@ li {
 
 .projects {
   margin-bottom: auto;
+}
+
+.projects button,
+.time-based-tasks button {
+  display: flex;
+  justify-content: left;
 }
