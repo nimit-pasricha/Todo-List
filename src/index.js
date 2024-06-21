@@ -1,2 +1,2 @@
-import { addNewProject, deleteProject, getProjects } from "./projects.js";
+import { addNewProject, deleteProject, getProjects, changeProjectName } from "./projects.js";
 import { createTodo, deleteTodo, editTodo } from "./todos.js";

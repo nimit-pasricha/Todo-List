@@ -8,8 +8,13 @@ function addNewProject(newProjectName) {
   projects[newProjectName] = [];
 }
 
-function deleteProject(projectToDelete) {
-  delete projects[projectToDelete];
+function deleteProject(projectName) {
+  delete projects[projectName];
 }
 
-export { getProjects, addNewProject, deleteProject };
+function changeProjectName(oldProjectName, newProjectName) {
+  projects.newProjectName = projects.oldProjectName;
+  delete projects[oldProjectName];
+}
+
+export { getProjects, addNewProject, deleteProject, changeProjectName };
