@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Todo List</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <h1>Things you have to do</h1>
-  <div class="container">
-    <div class="sidebar">
-      <div class="user-info">
-        <h2 class="user-name">Nimit Pasricha</h2>
+  <body>
+    <h1>Things you have to do</h1>
+    <div class="container">
+      <div class="sidebar">
+        <div class="user-info">
+          <h2 class="user-name">Nimit Pasricha</h2>
+        </div>
+        <button class="add-task-button">Add Task</button>
+        <div class="time-based-tasks">
+          <h2>Important Tasks</h2>
+          <ul>
+            <li><button>High Priority</button></li>
+            <li><button>Today</button></li>
+            <li><button>Next 7 days</button></li>
+          </ul>
+        </div>
+        <div class="projects">
+          <h2>Your Projects</h2>
+          <ul>
+            <li><button>Project 1</button></li>
+            <li><button>Project 2</button></li>
+            <li><button>Project 3</button></li>
+            <li><button>Project 4</button></li>
+            <li><button>Project 5</button></li>
+          </ul>
+        </div>
       </div>
-      <button class="add-task-button">Add Task</button>
-      <div class="time-based-tasks">
-        <h2>Important Tasks</h2>
-        <ul>
-          <li><button>High Priority</button></li>
-          <li><button>Today</button></li>
-          <li><button>Next 7 days</button></li>
-        </ul>
-      </div>
-      <div class="projects">
-        <h2>Your Projects</h2>
-        <ul>
-          <li><button>Project 1</button></li>
-          <li><button>Project 2</button></li>
-          <li><button>Project 3</button></li>
-          <li><button>Project 4</button></li>
-          <li><button>Project 5</button></li>
-        </ul>
-      </div>
+      <div class="content"></div>
     </div>
-    <div class="content"></div>
-  </div>
-</body>
-
+  </body>
 </html>
