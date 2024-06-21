@@ -60,20 +60,36 @@ header {
   padding: 4px;
 }
 
-.add-task-button {
+.add-task-button,
+li>button {
   background-color: var(--sidebar-background-color);
   color: var(--sidebar-font-color);
-  border: solid var(--sidebar-font-color) 2px;
-  font-size: 1.2rem;
   border-radius: 4px;
   padding: 8px 16px;
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+li>button {
+  display: flex;
+  justify-content: left;
+}
+
+.add-task-button {
+  border: solid var(--sidebar-font-color) 2px;
+  font-size: 1.2rem;
   width: 100%;
   font-weight: 600;
   transition: 0.2s;
 }
 
-.add-task-button:hover {
-  border: solid var(--sidebar-font-color) 2px;
+.add-task-button:hover,
+li>button:hover {
   background-color: var(--sidebar-font-color);
   color: var(--sidebar-background-color);
+}
+
+li {
+  list-style: none;
+  font-size: 1.1rem;
 }
