@@ -44,3 +44,13 @@ body {
   background-color: #facc15;
   padding: 4px;
 }
+
+.add-task-button {
+  background-color: var(--sidebar-background-color);
+  color: var(--sidebar-font-color);
+  border: solid var(--sidebar-font-color) 2px;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  padding: 8px 16px;
+  width: 100%;
+}
