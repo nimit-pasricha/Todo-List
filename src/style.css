@@ -12,8 +12,9 @@ body {
 }
 
 :root {
-  --sidebar-font-color: white;
+  --header-background-color: #fff1f2;
   --sidebar-background-color: lightcoral;
+  --sidebar-font-color: #ffffff;
 }
 
 body {
@@ -26,10 +27,19 @@ body {
   grid-template-columns: 1fr 4fr;
 }
 
+header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 16px;
+  color: var(--sidebar-background-color);
+  background-color: #ffe4e6;
+}
+
 .sidebar {
   background-color: var(--sidebar-background-color);
   padding: 24px;
-  color: var(--sidebar-font-color);
+  color: var(--sidebar-font-color)
 }
 
 .user-info {
@@ -58,11 +68,12 @@ body {
   border-radius: 4px;
   padding: 8px 16px;
   width: 100%;
+  font-weight: 600;
   transition: 0.2s;
 }
 
 .add-task-button:hover {
-  font-weight: 700;
   border: solid var(--sidebar-font-color) 2px;
-  background-color: #fda4af;
+  background-color: var(--sidebar-font-color);
+  color: var(--sidebar-background-color);
 }
