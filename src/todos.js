@@ -22,7 +22,7 @@ function editTodo(projectName, index, propertyToEdit, newValue) {
 
 function changeCompletedStatus(projectName, index) {
   const todoToEdit = getTodo(projectName, index);
-  todoToEdit.isCompleted = !isCompleted;
+  todoToEdit.isCompleted = !todoToEdit.isCompleted;
 }
 
 export { createTodo, deleteTodo, editTodo, changeCompletedStatus };
