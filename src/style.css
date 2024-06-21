@@ -95,6 +95,10 @@ ul {
   flex-direction: column;
 }
 
+ul button {
+  font-weight: 500;
+}
+
 .projects,
 .time-based-tasks {
   display: flex;
