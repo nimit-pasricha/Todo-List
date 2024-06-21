@@ -4,13 +4,11 @@ function getProjects() {
   return projects;
 }
 
-function addNewProject() {
-  const newProjectName = prompt("Enter name of project: ");
+function addNewProject(newProjectName) {
   projects[newProjectName] = [];
 }
 
-function deleteProject() {
-  const projectToDelete = prompt("Enter project name to delete");
+function deleteProject(projectToDelete) {
   delete projects[projectToDelete];
 }
 
