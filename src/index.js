@@ -19,6 +19,7 @@ import {
   addProjectsToForm,
   displayAllProjects,
   promptUserForNewTask,
+  restartFormOnExit,
 } from "./sidebar-interface.js";
 
 addNewProjectWithAddButton();
@@ -28,3 +29,4 @@ addNewProjectToSidebar();
 promptUserForNewTask();
 addProjectsToForm();
 addNewTaskToProject();
+restartFormOnExit();

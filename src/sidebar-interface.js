@@ -137,6 +137,27 @@ function addNewTaskToProject() {
   });
 }
 
+function restartFormOnExit() {
+  const taskDetailsForm = document.querySelector(".task-details-form");
+  taskDetailsForm.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      document.querySelector("#task-title").value = "";
+      document.querySelector("#task-description").value = "";
+      document.querySelector("#task-due-date").value = new Date();
+      const selectedPriority = document.querySelector(
+        'input[name="taskPriority"]:checked'
+      );
+      if (selectedPriority !== null) {
+        document.querySelector(
+          'input[name="taskPriority"]:checked'
+        ).checked = false;
+      }
+      taskDetailsForm.close();
+    }
+  });
+}
+
 // TODO: Prevent user from entering only whitespace project names
 // TODO: Prevent user from entering already-existing project names
 
@@ -148,4 +169,5 @@ export {
   promptUserForNewTask,
   addProjectsToForm,
   addNewTaskToProject,
+  restartFormOnExit,
 };
