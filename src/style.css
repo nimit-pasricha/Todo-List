@@ -276,7 +276,6 @@ select {
 }
 
 .task-details-form button[type="submit"]:hover {
-  font-weight: 600;
   letter-spacing: 1px;
   color: var(--sidebar-font-color);
   background-color: var(--sidebar-background-color);
