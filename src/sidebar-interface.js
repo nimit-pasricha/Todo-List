@@ -82,14 +82,15 @@ function makeNewProjectPromptInvisible(newProjectPrompt) {
 
 function addProjectsToForm() {
   const projects = getProjects();
-  const projectNameDatalist = document.querySelector(".project-name-datalist");
+  const projectNameList = document.querySelector("#project-name-list");
   Object.keys(projects)
     .reverse()
     .forEach((projectName) => {
-      const option = projectNameDatalist.appendChild(
+      const option = projectNameList.appendChild(
         document.createElement("option")
       );
       option.value = projectName;
+      option.textContent = projectName;
     });
 }
 
