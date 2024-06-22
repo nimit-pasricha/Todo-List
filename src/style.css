@@ -65,7 +65,8 @@ h1 {
 }
 
 .sidebar button,
-.new-project-prompt {
+/* .new-project-prompt, */
+input {
   background-color: var(--sidebar-background-color);
   color: var(--sidebar-font-color);
   border-radius: 4px;
@@ -73,6 +74,15 @@ h1 {
   font-size: 1.1rem;
   width: 100%;
   font-weight: 500;
+}
+
+input {
+  outline: none;
+}
+
+::placeholder {
+  color: var(--sidebar-font-color);
+  opacity: 0.5;
 }
 
 .add-task-button {
@@ -128,7 +138,7 @@ hr {
 
 .add-button-svg {
   height: 1.5em;
-  fill: white;
+  fill: var(--sidebar-font-color);
 }
 
 .title-and-add > button:hover > svg {
@@ -137,4 +147,32 @@ hr {
 
 .title-and-add > h2 {
   flex: 1 1 auto;
+}
+
+.invisible-new-project-prompt {
+  position: absolute;
+  visibility: hidden;
+}
+
+.new-project-prompt {
+  visibility: visible;
+  position: static;
+}
+
+.project-name-submit-svg {
+  height: 1.1rem;
+  fill: var(--sidebar-font-color);
+}
+
+.new-project-prompt button:hover > svg {
+  fill: var(--sidebar-background-color);
+}
+
+.new-project-prompt > form {
+  display: flex;
+  justify-content: left;
+}
+
+.new-project-prompt button[type="submit"] {
+  width: auto;
 }
