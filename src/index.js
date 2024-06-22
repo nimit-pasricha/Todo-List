@@ -14,15 +14,15 @@ import "./style.css";
 import {
   addNewProjectToSidebar,
   addNewProjectWithAddButton,
-  addNewTask,
   addProfilePictureToSidebar,
   addProjectsToForm,
   displayAllProjects,
+  promptUserForNewTask,
 } from "./sidebar-interface.js";
 
 addNewProjectWithAddButton();
 displayAllProjects();
 addProfilePictureToSidebar();
 addNewProjectToSidebar();
-addNewTask();
+promptUserForNewTask();
 addProjectsToForm();

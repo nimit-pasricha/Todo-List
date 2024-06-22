@@ -90,15 +90,10 @@ input {
 }
 
 .sidebar .add-task-button {
-  color: var(--sidebar-background-color);
-  background-color: var(--sidebar-font-color);
+  border: solid var(--sidebar-font-color) 2px;
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 600;
   transition: 0.2s;
-}
-
-.sidebar .add-task-button:hover {
-  font-weight: 800;
 }
 
 .sidebar button:hover {
@@ -268,6 +263,7 @@ select {
 }
 
 .task-details-form button[type="submit"]:hover {
+  font-weight: 600;
   color: var(--sidebar-font-color);
   background-color: var(--sidebar-background-color);
 }

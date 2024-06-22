@@ -82,15 +82,6 @@ function makeNewProjectPromptInvisible(newProjectPrompt) {
   newProjectPrompt.className = "invisible-new-project-prompt";
 }
 
-function addNewTask() {
-  const addTaskButton = document.querySelector(".add-task-button");
-  const taskDetailsForm = document.querySelector(".task-details-form");
-  addTaskButton.addEventListener("click", () => {
-    taskDetailsForm.showModal();
-    // TODO: ACTUALLY ADD THE BLOODY TASK BRUH
-  });
-}
-
 function addProjectsToForm() {
   const projects = getProjects();
   const projectNameList = document.querySelector("#project-name-list");
@@ -106,6 +97,14 @@ function addProjectsToForm() {
     });
 }
 
+function promptUserForNewTask() {
+  const addTaskButton = document.querySelector(".add-task-button");
+  const taskDetailsForm = document.querySelector(".task-details-form");
+  addTaskButton.addEventListener("click", () => {
+    taskDetailsForm.showModal();
+  });
+}
+
 // TODO: Prevent user from entering only whitespace project names
 // TODO: Prevent user from entering already-existing project names
 
@@ -114,6 +113,6 @@ export {
   addNewProjectWithAddButton,
   displayAllProjects,
   addNewProjectToSidebar,
-  addNewTask,
+  promptUserForNewTask,
   addProjectsToForm,
 };
