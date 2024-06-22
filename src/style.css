@@ -252,3 +252,7 @@ input[type="radio"] {
   width: auto;
   accent-color: var(--sidebar-background-color);
 }
+
+.radio-button label {
+  font-weight: 400;
+}
