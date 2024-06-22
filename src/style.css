@@ -176,4 +176,5 @@ hr {
 
 .new-project-prompt button[type="submit"] {
   width: auto;
+  transition: 0.2s;
 }

@@ -14,7 +14,9 @@ import "./style.css";
 import {
   addNewProjectWithAddButton,
   addProfilePictureToSidebar,
+  displayAllProjects,
 } from "./sidebar-interface.js";
 
 addProfilePictureToSidebar();
 addNewProjectWithAddButton();
+displayAllProjects();

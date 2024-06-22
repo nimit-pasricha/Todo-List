@@ -1,4 +1,5 @@
 import pfp from "./images/cat-pfp.png";
+import { getProjects } from "./projects";
 
 function addProfilePictureToSidebar() {
   const profilePicture = new Image();
@@ -20,4 +21,24 @@ function addNewProjectWithAddButton() {
     newProjectPrompt.className = "new-project-prompt";
   });
 }
-export { addProfilePictureToSidebar, addNewProjectWithAddButton };
+
+function displayAllProjects() {
+  const projects = getProjects();
+  const projectList = document.querySelector(".project-list");
+
+  for (let projectName of Object.keys(projects)) {
+    const projectListItem = projectList.appendChild(
+      document.createElement("li")
+    );
+    const projectButton = projectListItem.appendChild(
+      document.createElement("button")
+    );
+    projectButton.textContent = projectName;
+  }
+}
+
+export {
+  addProfilePictureToSidebar,
+  addNewProjectWithAddButton,
+  displayAllProjects,
+};
