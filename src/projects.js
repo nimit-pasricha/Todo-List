@@ -1,4 +1,4 @@
-const projects = {};
+const projects = { Personal: [] };
 
 function getProjects() {
   return projects;

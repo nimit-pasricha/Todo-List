@@ -16,6 +16,7 @@ body {
   --header-background-color: #fff1f2;
   --sidebar-background-color: lightcoral;
   --sidebar-font-color: #ffffff;
+  --container-inset-shadow: inset 0 4px 8px -4px rgba(0, 0, 0, 0.4);
 }
 
 body {
@@ -26,6 +27,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr 4fr;
+  box-shadow: var(--container-inset-shadow);
 }
 
 h1 {
@@ -38,6 +40,7 @@ h1 {
 }
 
 .sidebar {
+  box-shadow: var(--container-inset-shadow);
   background-color: var(--sidebar-background-color);
   padding: 24px;
   color: var(--sidebar-font-color);
@@ -177,4 +180,8 @@ hr {
 .new-project-prompt button[type="submit"] {
   width: auto;
   transition: 0.2s;
+}
+
+.project-list button {
+  /* TODO: stop sidebar from expanding if project name is too long */
 }

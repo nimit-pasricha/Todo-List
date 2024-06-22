@@ -80,6 +80,9 @@ function makeNewProjectPromptInvisible(newProjectPrompt) {
   newProjectPrompt.className = "invisible-new-project-prompt";
 }
 
+// TODO: Prevent user from entering only whitespace project names
+// TODO: Prevent user from entering already-existing project names
+
 export {
   addProfilePictureToSidebar,
   addNewProjectWithAddButton,
