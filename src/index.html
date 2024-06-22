@@ -29,14 +29,26 @@
               <label for="task-due-date">Due Date</label>
               <input type="date" name="taskDueDate" id="task-due-date" />
             </fieldset>
-            <fieldset>
+            <fieldset class="priority-buttons">
               <legend>Priority</legend>
-              <label for="high-priority">High</label>
-              <input type="radio" name="taskPriority" id="high-priority" />
-              <label for="medium-priority">Medium</label>
-              <input type="radio" name="taskPriority" id="medium-priority" />
-              <label for="low-priority">Low</label>
-              <input type="radio" name="taskPriority" id="low-priority" />
+              <div>
+                <div class="radio-button">
+                  <input type="radio" name="taskPriority" id="low-priority" />
+                  <label for="low-priority">Low</label>
+                </div>
+                <div class="radio-button">
+                  <input
+                    type="radio"
+                    name="taskPriority"
+                    id="medium-priority"
+                  />
+                  <label for="medium-priority">Medium</label>
+                </div>
+                <div class="radio-button">
+                  <input type="radio" name="taskPriority" id="high-priority" />
+                  <label for="high-priority">High</label>
+                </div>
+              </div>
             </fieldset>
             <fieldset>
               <label for="task-project-name"

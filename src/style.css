@@ -202,8 +202,9 @@ dialog {
   color: var(--sidebar-background-color);
 }
 
-.task-details-form input,
+.task-details-form input:not(input[type="radio"]),
 .task-details-form textarea {
+  width: 50ch;
   color: black;
   background-color: #fafafa;
 }
@@ -220,4 +221,26 @@ dialog {
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+
+.task-details-form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.radio-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.priority-buttons > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+input[type="radio"] {
+  width: auto;
 }
