@@ -261,3 +261,8 @@ select {
   border-radius: 4px;
   font-size: 1rem;
 }
+
+.task-details-form button[type="submit"]:hover {
+  color: var(--sidebar-font-color);
+  background-color: var(--sidebar-background-color);
+}
