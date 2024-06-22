@@ -17,9 +17,13 @@ function addNewProjectWithAddButton() {
     const newProjectPrompt = document.querySelector(
       ".invisible-new-project-prompt"
     );
-    newProjectPrompt.classList.remove("invisible-new-project-prompt");
-    newProjectPrompt.className = "new-project-prompt";
+    makeNewProjectPromptVisible(newProjectPrompt);
   });
+}
+
+function makeNewProjectPromptVisible(newProjectPrompt) {
+  newProjectPrompt.classList.remove("invisible-new-project-prompt");
+  newProjectPrompt.className = "new-project-prompt";
 }
 
 function displayAllProjects() {
@@ -53,10 +57,21 @@ function addNewProjectToSidebar() {
   );
   createNewProjectButton.addEventListener("click", (event) => {
     event.preventDefault();
-    const newProjectName = document.querySelector("#project-name").value;
+    const newProject = document.querySelector("#project-name");
+
+    const newProjectName = newProject.value;
     addNewProject(newProjectName);
     displayAllProjects();
+
+    newProject.value = "";
+    const newProjectPrompt = document.querySelector(".new-project-prompt");
+    makeNewProjectPromptInvisible(newProjectPrompt);
   });
+}
+
+function makeNewProjectPromptInvisible(newProjectPrompt) {
+  newProjectPrompt.classList.remove("new-project-prompt");
+  newProjectPrompt.className = "invisible-new-project-prompt";
 }
 
 export {
