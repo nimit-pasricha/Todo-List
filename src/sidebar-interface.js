@@ -87,6 +87,7 @@ function addNewTask() {
   const taskDetailsForm = document.querySelector(".task-details-form");
   addTaskButton.addEventListener("click", () => {
     taskDetailsForm.showModal();
+    // TODO: ACTUALLY ADD THE BLOODY TASK BRUH
   });
 }
 

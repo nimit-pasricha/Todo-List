@@ -1,4 +1,4 @@
-* {
+*:not(dialog) {
   padding: 0;
   margin: 0;
   border: 0;
@@ -182,6 +182,33 @@ hr {
   transition: 0.2s;
 }
 
-.project-list button {
-  /* TODO: stop sidebar from expanding if project name is too long */
+/* .project-list button {
+  TODO: stop sidebar from expanding if project name is too long
+} */
+
+dialog {
+  border: solid 2px var(--sidebar-background-color);
+  border-radius: 4px;
+  font-size: 1.2rem;
+}
+
+.task-details-form * {
+  display: block;
+}
+
+.task-details-form label,
+.task-details-form legend {
+  font-weight: 600;
+  color: var(--sidebar-background-color);
+}
+
+.task-details-form input,
+.task-details-form textarea {
+  color: var(--sidebar-background-color);
+  background-color: #fafafa;
+}
+
+.task-details-form textarea {
+  width: 100%;
+  height: 6ch;
 }
