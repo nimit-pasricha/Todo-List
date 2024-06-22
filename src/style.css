@@ -89,11 +89,16 @@ input {
   opacity: 0.5;
 }
 
-.add-task-button {
-  border: solid var(--sidebar-font-color) 2px;
+.sidebar .add-task-button {
+  color: var(--sidebar-background-color);
+  background-color: var(--sidebar-font-color);
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 700;
   transition: 0.2s;
+}
+
+.sidebar .add-task-button:hover {
+  font-weight: 800;
 }
 
 .sidebar button:hover {
@@ -219,7 +224,7 @@ dialog {
 }
 
 .task-details-form > form {
-  padding: 16px;
+  padding: 8px;
   display: flex;
   flex-direction: column;
   gap: 48px;
