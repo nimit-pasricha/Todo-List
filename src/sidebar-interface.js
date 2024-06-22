@@ -93,6 +93,7 @@ function addNewTask() {
 function addProjectsToForm() {
   const projects = getProjects();
   const projectNameList = document.querySelector("#project-name-list");
+  projectNameList.innerHTML = "";
   Object.keys(projects)
     .reverse()
     .forEach((projectName) => {
