@@ -68,8 +68,17 @@ h1 {
   padding: 4px;
 }
 
+.sidebar .add-task-button {
+  background-color: var(--sidebar-font-color);
+  color: var(--sidebar-background-color);
+  font-weight: 600;
+}
+
+.sidebar .add-task-button:hover {
+  letter-spacing: 1px;
+}
+
 .sidebar button,
-/* .new-project-prompt, */
 input {
   background-color: var(--sidebar-background-color);
   color: var(--sidebar-font-color);
