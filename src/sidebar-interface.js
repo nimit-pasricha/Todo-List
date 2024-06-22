@@ -34,7 +34,7 @@ function displayAllProjects() {
   // project list
   removeAllButFirstChild(projectList);
 
-  for (let projectName of Object.keys(projects)) {
+  for (let projectName of Object.keys(projects).reverse()) {
     const projectListItem = projectList.appendChild(
       document.createElement("li")
     );
@@ -63,7 +63,10 @@ function addNewProjectToSidebar() {
     addNewProject(newProjectName);
     displayAllProjects();
 
+    // empty newProject input field to make space for next input
     newProject.value = "";
+
+    // hide the prompt
     const newProjectPrompt = document.querySelector(".new-project-prompt");
     makeNewProjectPromptInvisible(newProjectPrompt);
   });
