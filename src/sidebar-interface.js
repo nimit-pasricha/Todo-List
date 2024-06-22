@@ -80,6 +80,19 @@ function makeNewProjectPromptInvisible(newProjectPrompt) {
   newProjectPrompt.className = "invisible-new-project-prompt";
 }
 
+function addProjectsToForm() {
+  const projects = getProjects();
+  const projectNameDatalist = document.querySelector(".project-name-datalist");
+  Object.keys(projects)
+    .reverse()
+    .forEach((projectName) => {
+      const option = projectNameDatalist.appendChild(
+        document.createElement("option")
+      );
+      option.value = projectName;
+    });
+}
+
 // TODO: Prevent user from entering only whitespace project names
 // TODO: Prevent user from entering already-existing project names
 
