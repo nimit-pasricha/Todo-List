@@ -171,6 +171,7 @@ hr {
 .new-project-prompt > form {
   display: flex;
   justify-content: left;
+  align-items: center;
 }
 
 .new-project-prompt button[type="submit"] {
