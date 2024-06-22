@@ -18,6 +18,9 @@ function addNewProjectWithAddButton() {
       ".invisible-new-project-prompt"
     );
     makeNewProjectPromptVisible(newProjectPrompt);
+
+    // switch focus to input element
+    document.querySelector("#project-name").focus();
   });
 }
 
