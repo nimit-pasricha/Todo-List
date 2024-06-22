@@ -64,13 +64,15 @@ h1 {
   padding: 4px;
 }
 
-.sidebar button {
+.sidebar button,
+.new-project-prompt {
   background-color: var(--sidebar-background-color);
   color: var(--sidebar-font-color);
   border-radius: 4px;
   padding: 8px 16px;
   font-size: 1.1rem;
   width: 100%;
+  font-weight: 500;
 }
 
 .add-task-button {
@@ -93,10 +95,6 @@ li {
 ul {
   display: flex;
   flex-direction: column;
-}
-
-ul button {
-  font-weight: 500;
 }
 
 .projects,

@@ -11,6 +11,10 @@ import {
   changeCompletedStatus,
 } from "./todos.js";
 import "./style.css";
-import { addProfilePictureToSidebar } from "./ui-generator.js";
+import {
+  addNewProjectWithAddButton,
+  addProfilePictureToSidebar,
+} from "./sidebar-interface.js";
 
 addProfilePictureToSidebar();
+addNewProjectWithAddButton();
