@@ -66,6 +66,8 @@ function addNewProjectToSidebar() {
     addNewProject(newProjectName);
     displayAllProjects();
 
+    addProjectsToForm();
+
     // empty newProject input field to make space for next input
     newProject.value = "";
 
@@ -78,6 +80,14 @@ function addNewProjectToSidebar() {
 function makeNewProjectPromptInvisible(newProjectPrompt) {
   newProjectPrompt.classList.remove("new-project-prompt");
   newProjectPrompt.className = "invisible-new-project-prompt";
+}
+
+function addNewTask() {
+  const addTaskButton = document.querySelector(".add-task-button");
+  const taskDetailsForm = document.querySelector(".task-details-form");
+  addTaskButton.addEventListener("click", () => {
+    taskDetailsForm.showModal();
+  });
 }
 
 function addProjectsToForm() {
@@ -102,4 +112,6 @@ export {
   addNewProjectWithAddButton,
   displayAllProjects,
   addNewProjectToSidebar,
+  addNewTask,
+  addProjectsToForm,
 };
