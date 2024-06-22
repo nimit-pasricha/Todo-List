@@ -111,3 +111,32 @@ ul button {
   display: flex;
   justify-content: left;
 }
+
+hr {
+  border-radius: 4px;
+  border-bottom: solid rgb(255, 255, 255, 0.3);
+}
+
+.title-and-add {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.title-and-add > button {
+  width: auto;
+  transition: 0.2s;
+}
+
+.add-button-svg {
+  height: 1.5em;
+  fill: white;
+}
+
+.title-and-add > button:hover > svg {
+  fill: var(--sidebar-background-color);
+}
+
+.title-and-add > h2 {
+  flex: 1 1 auto;
+}
