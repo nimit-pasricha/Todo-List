@@ -33,7 +33,12 @@
               <legend>Priority</legend>
               <div>
                 <div class="radio-button">
-                  <input type="radio" name="taskPriority" id="low-priority" />
+                  <input
+                    type="radio"
+                    name="taskPriority"
+                    id="low-priority"
+                    value="Low"
+                  />
                   <label for="low-priority">Low</label>
                 </div>
                 <div class="radio-button">
@@ -41,22 +46,30 @@
                     type="radio"
                     name="taskPriority"
                     id="medium-priority"
+                    value="Medium"
                   />
                   <label for="medium-priority">Medium</label>
                 </div>
                 <div class="radio-button">
-                  <input type="radio" name="taskPriority" id="high-priority" />
+                  <input
+                    type="radio"
+                    name="taskPriority"
+                    id="high-priority"
+                    value="High"
+                  />
                   <label for="high-priority">High</label>
                 </div>
               </div>
             </fieldset>
             <fieldset>
-              <label for="task-project-name"
+              <label for="project-name-list"
                 >Which project should this task be added to?</label
               >
               <select name="projectNameList" id="project-name-list"></select>
             </fieldset>
-            <button type="submit">Add Task</button>
+            <button type="submit" class="submit-task-details-button">
+              Add Task
+            </button>
           </form>
         </dialog>
         <div class="time-based-tasks">

@@ -1,5 +1,6 @@
 import pfp from "./images/cat-pfp.png";
 import { getProjects, addNewProject } from "./projects";
+import { createTodo } from "./todos";
 
 function addProfilePictureToSidebar() {
   const profilePicture = new Image();
@@ -105,6 +106,37 @@ function promptUserForNewTask() {
   });
 }
 
+function addNewTaskToProject() {
+  const taskDetailsSubmitButton = document.querySelector(
+    ".submit-task-details-button"
+  );
+  taskDetailsSubmitButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    const title = document.querySelector("#task-title");
+    const description = document.querySelector("#task-description");
+    const dueDate = document.querySelector("#task-due-date");
+    const selectedPriority = document.querySelector(
+      'input[name="taskPriority"]:checked'
+    );
+    const selectedProject = document.querySelector("#project-name-list");
+    createTodo(
+      title.value,
+      description.value,
+      dueDate.value,
+      selectedPriority.value,
+      selectedProject.value
+    );
+
+    // reset the form to prepare for next input
+    title.value = "";
+    description.value = "";
+    dueDate.value = new Date();
+    selectedPriority.checked = false;
+
+    document.querySelector(".task-details-form").close();
+  });
+}
+
 // TODO: Prevent user from entering only whitespace project names
 // TODO: Prevent user from entering already-existing project names
 
@@ -115,4 +147,5 @@ export {
   addNewProjectToSidebar,
   promptUserForNewTask,
   addProjectsToForm,
+  addNewTaskToProject,
 };

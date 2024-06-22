@@ -14,6 +14,7 @@ import "./style.css";
 import {
   addNewProjectToSidebar,
   addNewProjectWithAddButton,
+  addNewTaskToProject,
   addProfilePictureToSidebar,
   addProjectsToForm,
   displayAllProjects,
@@ -26,3 +27,4 @@ addProfilePictureToSidebar();
 addNewProjectToSidebar();
 promptUserForNewTask();
 addProjectsToForm();
+addNewTaskToProject();
