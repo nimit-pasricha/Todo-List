@@ -15,6 +15,34 @@
           <h2 class="user-name">Nimit Pasricha</h2>
         </div>
         <button class="add-task-button">Add Task</button>
+        <dialog class="task-details-form">
+          <form action="">
+            <label for="title">Title</label>
+            <input type="text" name="taskTitle" id="task-title" />
+            <textarea
+              name="taskDescription"
+              id="task-description"
+              placeholder="Enter task details here..."
+            >
+            </textarea>
+            <label for="task-due-date">Due Date</label>
+            <input type="datetime" name="taskDueDate" id="task-due-date" />
+            <fieldset>
+              <legend>Priority</legend>
+              <label for="high-priority">High</label>
+              <input type="radio" name="taskPriority" id="high-priority" />
+              <label for="medium-priority">Medium</label>
+              <input type="radio" name="taskPriority" id="medium-priority" />
+              <label for="low-priority">Low</label>
+              <input type="radio" name="taskPriority" id="low-priority" />
+            </fieldset>
+            <label for="task-project-name"
+              >Which project should this task be added to?</label
+            >
+            <input list="project-list-selection" name="taskProject" />
+            <datalist id="project-list-selection"></datalist>
+          </form>
+        </dialog>
         <div class="time-based-tasks">
           <h2>Important Tasks</h2>
           <ul>
