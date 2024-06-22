@@ -1,5 +1,5 @@
 import pfp from "./images/cat-pfp.png";
-import { getProjects } from "./projects";
+import { getProjects, addNewProject } from "./projects";
 
 function addProfilePictureToSidebar() {
   const profilePicture = new Image();
@@ -26,6 +26,10 @@ function displayAllProjects() {
   const projects = getProjects();
   const projectList = document.querySelector(".project-list");
 
+  // delete all children except for new project prompt from the
+  // project list
+  removeAllButFirstChild(projectList);
+
   for (let projectName of Object.keys(projects)) {
     const projectListItem = projectList.appendChild(
       document.createElement("li")
@@ -37,8 +41,27 @@ function displayAllProjects() {
   }
 }
 
+function removeAllButFirstChild(parentNode) {
+  while (parentNode.childNodes.length > 1) {
+    parentNode.removeChild(parentNode.lastChild);
+  }
+}
+
+function addNewProjectToSidebar() {
+  const createNewProjectButton = document.querySelector(
+    ".create-new-project-button"
+  );
+  createNewProjectButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    const newProjectName = document.querySelector("#project-name").value;
+    addNewProject(newProjectName);
+    displayAllProjects();
+  });
+}
+
 export {
   addProfilePictureToSidebar,
   addNewProjectWithAddButton,
   displayAllProjects,
+  addNewProjectToSidebar,
 };

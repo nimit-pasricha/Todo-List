@@ -12,11 +12,13 @@ import {
 } from "./todos.js";
 import "./style.css";
 import {
+  addNewProjectToSidebar,
   addNewProjectWithAddButton,
   addProfilePictureToSidebar,
   displayAllProjects,
 } from "./sidebar-interface.js";
 
-addProfilePictureToSidebar();
 addNewProjectWithAddButton();
 displayAllProjects();
+addProfilePictureToSidebar();
+addNewProjectToSidebar();
