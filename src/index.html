@@ -17,12 +17,18 @@
         <button class="add-task-button">Add Task</button>
         <dialog class="task-details-form">
           <form action="">
-            <label for="title">Title</label>
-            <input type="text" name="taskTitle" id="task-title" />
-            <label for="task-description">Description</label>
-            <textarea name="taskDescription" id="task-description"> </textarea>
-            <label for="task-due-date">Due Date</label>
-            <input type="date" name="taskDueDate" id="task-due-date" />
+            <fieldset>
+              <label for="title">Title</label>
+              <input type="text" name="taskTitle" id="task-title" />
+            </fieldset>
+            <fieldset>
+              <label for="task-description">Description</label>
+              <textarea name="taskDescription" id="task-description"></textarea>
+            </fieldset>
+            <fieldset>
+              <label for="task-due-date">Due Date</label>
+              <input type="date" name="taskDueDate" id="task-due-date" />
+            </fieldset>
             <fieldset>
               <legend>Priority</legend>
               <label for="high-priority">High</label>
@@ -32,10 +38,12 @@
               <label for="low-priority">Low</label>
               <input type="radio" name="taskPriority" id="low-priority" />
             </fieldset>
-            <label for="task-project-name"
-              >Which project should this task be added to?</label
-            >
-            <select name="projectNameList" id="project-name-list"></select>
+            <fieldset>
+              <label for="task-project-name"
+                >Which project should this task be added to?</label
+              >
+              <select name="projectNameList" id="project-name-list"></select>
+            </fieldset>
           </form>
         </dialog>
         <div class="time-based-tasks">
