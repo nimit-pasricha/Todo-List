@@ -334,6 +334,7 @@ select {
 .task-controls {
   display: flex;
   justify-self: end;
+  gap: 2px;
 }
 
 .task-controls button {
