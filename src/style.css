@@ -362,15 +362,15 @@ select {
   transition: 0.1s;
 }
 
-.expand-button svg {
+.check-button-button svg {
   fill: #22c55e;
 }
 
-.expand-button:hover {
+.check-button:hover {
   background-color: #22c55e;
 }
 
-.expand-button:hover svg {
+.check-button:hover svg {
   fill: var(--add-task-input-background);
 }
 

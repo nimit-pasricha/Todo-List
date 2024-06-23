@@ -53,14 +53,14 @@ function displayTasksInProject(projectName) {
         <div class="task" data-index="${index}">
           <h3></h3>
           <div class="task-controls">
-            <button class="expand-button" data-index="${index}">
+            <button class="check-button" data-index="${index}">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>check-bold</title><path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z" /></svg>
             </button>
             <button class="edit-button" data-index="${index}">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                class="expand-icon"
+                class="check-icon"
               >
                 <title>pencil</title>
                 <path
@@ -114,5 +114,4 @@ function deleteTask() {
     });
   });
 }
-
 export { displayProjectInformation };
