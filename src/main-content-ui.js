@@ -96,6 +96,7 @@ function displayTasksInProject(projectName) {
       index++;
     });
 
+    completeTask();
     deleteTask();
   }
 }
@@ -114,4 +115,22 @@ function deleteTask() {
     });
   });
 }
+
+function completeTask() {
+  const projects = getProjects();
+  const checkButtons = document.querySelectorAll(".check-button");
+  checkButtons.forEach((checkButton) => {
+    checkButton.addEventListener("click", () => {
+      const taskToCompleteIndex = checkButton.dataset.index;
+      const projectToEdit = document.querySelector(
+        ".project-title-and-add > h2"
+      ).textContent;
+      const taskToComplete = projects[projectToEdit][taskToCompleteIndex];
+      taskToComplete.isCompleted = !taskToComplete.isCompleted;
+      displayTasksInProject(projectToEdit);
+      console.log(projects);
+    });
+  });
+}
+
 export { displayProjectInformation };
