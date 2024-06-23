@@ -46,6 +46,7 @@ function displayAllProjects() {
       document.createElement("button")
     );
     projectButton.textContent = projectName;
+    projectButton.classList.add("project-button");
   }
 }
 
