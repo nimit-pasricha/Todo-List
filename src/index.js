@@ -20,7 +20,7 @@ import {
   displayAllProjects,
   promptUserForNewTask,
   restartFormOnExit,
-} from "./sidebar-interface.js";
+} from "./sidebar-ui.js";
 
 addNewProjectWithAddButton();
 displayAllProjects();

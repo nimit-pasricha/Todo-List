@@ -158,8 +158,7 @@ function restartFormOnExit() {
   });
 }
 
-// TODO: Prevent user from entering only whitespace project names
-// TODO: Prevent user from entering already-existing project names
+// TODO: Remove the new project prompt when it loses focus (by, for example, user clicking somewhere else)
 
 export {
   addProfilePictureToSidebar,

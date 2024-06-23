@@ -31,6 +31,11 @@ body {
   box-shadow: var(--container-inset-shadow);
 }
 
+button {
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
 h1 {
   display: flex;
   justify-content: left;
@@ -279,4 +284,29 @@ select {
   letter-spacing: 1px;
   color: var(--sidebar-font-color);
   background-color: var(--sidebar-background-color);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+}
+
+.project-title-and-add {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-title-and-add h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.project-title-and-add button {
+  background-color: white;
+}
+
+.project-title-and-add svg {
+  height: 2rem;
 }
