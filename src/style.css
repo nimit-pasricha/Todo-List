@@ -362,7 +362,7 @@ select {
   transition: 0.1s;
 }
 
-.check-button-button svg {
+.check-button svg {
   fill: #22c55e;
 }
 
