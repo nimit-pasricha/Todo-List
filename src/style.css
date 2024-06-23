@@ -343,7 +343,7 @@ select {
 }
 
 .task-controls button {
-  background-color: var(--sidebar-font-color);
+  background-color: var(--add-task-input-background);
 }
 
 .task-controls svg {
