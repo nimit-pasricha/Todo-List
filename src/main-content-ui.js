@@ -46,7 +46,7 @@ function displayTasksInProject(projectName) {
   let index = 0;
 
   if (thisProjectsTasks.length === 0) {
-    taskList.innerHTML = "<div>This project has no more tasks :)</div>";
+    taskList.innerHTML = "<div>This project has no tasks :)</div>";
   } else {
     thisProjectsTasks.forEach((task) => {
       taskList.innerHTML += `
