@@ -184,4 +184,5 @@ export {
   addProjectsToForm,
   addNewTaskToProject,
   restartFormOnExit,
+  clickProjectInSidebar,
 };

@@ -1,13 +1,22 @@
 import { getProjects } from "./projects";
+import { clickProjectInSidebar } from "./sidebar-ui";
 
 function displayProjectInformation() {
+  const defaultProjectName = "Personal";
+
+  // display person task list by default.
+  const defaultProject = document.querySelector(
+    `.project-button[value="${defaultProjectName}"]`
+  );
+  clickProjectInSidebar(defaultProject);
+
   const contentContainer = document.querySelector(".content");
   const projectButtons = document.querySelectorAll(".project-button");
   projectButtons.forEach((projectButton) => {
     projectButton.addEventListener("click", () => {
       contentContainer.innerHTML = `
       <div class="project-title-and-add">
-          <h2>Project Name</h2>
+          <h2></h2>
           <button>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <title>plus</title>
