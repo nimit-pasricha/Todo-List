@@ -54,16 +54,7 @@ function displayTasksInProject(projectName) {
           <h3></h3>
           <div class="task-controls">
             <button class="expand-button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                class="expand-icon"
-              >
-                <title>arrow-expand</title>
-                <path
-                  d="M10,21V19H6.41L10.91,14.5L9.5,13.09L5,17.59V14H3V21H10M14.5,10.91L19,6.41V10H21V3H14V5H17.59L13.09,9.5L14.5,10.91Z"
-                />
-              </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>check-bold</title><path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z" /></svg>
             </button>
             <button class="edit-button">
               <svg

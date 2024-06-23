@@ -202,7 +202,7 @@ hr {
 } */
 
 dialog {
-  border: solid 4px var(--sidebar-background-color);
+  border: solid 2px var(--sidebar-background-color);
   border-radius: 4px;
   font-size: 1.2rem;
 }
