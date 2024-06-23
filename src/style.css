@@ -321,6 +321,12 @@ select {
   height: 2rem;
 }
 
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .task {
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -332,7 +338,7 @@ select {
 }
 
 .task h3 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 500;
 }
 
@@ -348,7 +354,7 @@ select {
 }
 
 .task-controls svg {
-  height: 1.4rem;
+  height: 1.3rem;
 }
 
 .task button {
@@ -378,3 +384,5 @@ select {
 .delete-button:hover svg {
   fill: var(--sidebar-font-color);
 }
+
+/* TODO: Change background color of tasks based on priority */
