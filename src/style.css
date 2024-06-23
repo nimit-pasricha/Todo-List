@@ -340,6 +340,7 @@ select {
   display: flex;
   gap: 2px;
   grid-row: span 2;
+  justify-content: space-between;
 }
 
 .task-controls button {
