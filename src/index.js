@@ -21,6 +21,7 @@ import {
   promptUserForNewTask,
   restartFormOnExit,
 } from "./sidebar-ui.js";
+import { displayProjectInformation } from "./main-content-ui.js";
 
 addNewProjectWithAddButton();
 displayAllProjects();
@@ -30,3 +31,4 @@ promptUserForNewTask();
 addProjectsToForm();
 addNewTaskToProject();
 restartFormOnExit();
+displayProjectInformation();

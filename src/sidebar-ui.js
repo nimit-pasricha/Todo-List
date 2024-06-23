@@ -1,4 +1,5 @@
 import pfp from "./images/cat-pfp.png";
+import { displayProjectInformation } from "./main-content-ui";
 import { getProjects, addNewProject } from "./projects";
 import { createTodo } from "./todos";
 
@@ -48,6 +49,8 @@ function displayAllProjects() {
     projectButton.textContent = projectName;
     projectButton.classList.add("project-button");
   }
+
+  displayProjectInformation();
 }
 
 function removeAllButFirstChild(parentNode) {
