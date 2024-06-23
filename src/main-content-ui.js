@@ -1,12 +1,12 @@
 import { getProjects, moveCompletedTasksToEnd } from "./projects";
-import { clickProjectInSidebar } from "./sidebar-ui";
+import { clickProjectInSidebar, displayAllProjects } from "./sidebar-ui";
 import { format } from "date-fns";
 import { changeCompletedStatus, deleteTodo } from "./todos";
 
 function displayProjectInformation() {
   const defaultProjectName = "Personal";
 
-  // display person task list by default.
+  // display personal task list by default.
   const defaultProject = document.querySelector(
     `.project-button[value="${defaultProjectName}"]`
   );
@@ -33,6 +33,7 @@ function displayProjectInformation() {
         ".project-title-and-add > h2"
       );
       spaceForProjectName.textContent = projectButton.textContent;
+      spaceForProjectName.value = projectButton.textContent;
 
       displayTasksInProject(projectButton.textContent);
     });
@@ -150,6 +151,9 @@ function editTask() {
       const projectToEdit = document.querySelector(
         ".project-title-and-add > h2"
       ).textContent;
+
+      // Open edit window with currently selected values
+      // already present in the input fields
       const addTaskButton = document.querySelector(".add-task-button");
       addTaskButton.click();
 
@@ -172,6 +176,26 @@ function editTask() {
         `option[value="${projectToEdit}"]`
       );
       projectNameInput.selected = "selected";
+
+      // Change the Add Task submit button to edit the task
+      // instead of creating a new one
+
+      const submitTaskDetailsButton = document.querySelector(
+        ".submit-task-details-button"
+      );
+      submitTaskDetailsButton.addEventListener(
+        "click",
+        () => {
+          const newlySelectedProject =
+            document.querySelector("#project-name-list").value;
+          const projectToDisplay = document.querySelector(
+            `.project-button[value="${newlySelectedProject}"]`
+          );
+          deleteTodo(projectToEdit, taskToEditIndex);
+          clickProjectInSidebar(projectToDisplay);
+        },
+        { once: true }
+      );
     });
   });
 }
