@@ -399,3 +399,11 @@ select {
 }
 
 /* TODO: Change background color of tasks based on priority */
+
+.task.completed {
+  opacity: 0.5;
+}
+
+.task.completed h3 {
+  text-decoration-line: line-through;
+}

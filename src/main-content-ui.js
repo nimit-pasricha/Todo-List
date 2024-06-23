@@ -93,6 +93,13 @@ function displayTasksInProject(projectName) {
         `.task[data-index="${index}"] .task-due-date`
       );
       taskDueDate.textContent = task.dueDate;
+
+      if (task.isCompleted) {
+        const completedTask = document.querySelector(
+          `.task[data-index="${index}"]`
+        );
+        completedTask.classList.add("completed");
+      }
       index++;
     });
 
