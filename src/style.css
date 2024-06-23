@@ -362,12 +362,20 @@ select {
   transition: 0.1s;
 }
 
+.expand-button svg {
+  fill: #22c55e;
+}
+
 .expand-button:hover {
   background-color: #22c55e;
 }
 
 .expand-button:hover svg {
-  fill: var(--sidebar-font-color);
+  fill: var(--add-task-input-background);
+}
+
+.edit-button svg {
+  fill: #f59e0b;
 }
 
 .edit-button:hover {
@@ -375,7 +383,11 @@ select {
 }
 
 .edit-button:hover svg {
-  fill: var(--sidebar-font-color);
+  fill: var(--add-task-input-background);
+}
+
+.delete-button svg {
+  fill: #ef4444;
 }
 
 .delete-button:hover {
@@ -383,7 +395,7 @@ select {
 }
 
 .delete-button:hover svg {
-  fill: var(--sidebar-font-color);
+  fill: var(--add-task-input-background);
 }
 
 /* TODO: Change background color of tasks based on priority */
