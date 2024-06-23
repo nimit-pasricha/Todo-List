@@ -13,20 +13,6 @@ function deleteTodo(projectName, index) {
   localStorage.setItem("projects", JSON.stringify(projects));
 }
 
-function editTodo(
-  projectName,
-  index,
-  newTitle,
-  newDescription,
-  newDueDate,
-  newPriority
-) {
-  const projects = getProjects();
-  deleteTodo(projectName, index);
-  createTodo(newTitle, newDescription, newDueDate, newPriority, projectName);
-  localStorage.setItem("projects", JSON.stringify(projects));
-}
-
 function changeCompletedStatus(projectName, index) {
   const projects = getProjects();
   const todoToEdit = projects[projectName][index];
@@ -34,4 +20,4 @@ function changeCompletedStatus(projectName, index) {
   localStorage.setItem("projects", JSON.stringify(projects));
 }
 
-export { createTodo, deleteTodo, editTodo, changeCompletedStatus };
+export { createTodo, deleteTodo, changeCompletedStatus };

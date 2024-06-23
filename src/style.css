@@ -398,8 +398,6 @@ select {
   fill: var(--add-task-input-background);
 }
 
-/* TODO: Change background color of tasks based on priority */
-
 .task.completed {
   opacity: 0.5;
 }
