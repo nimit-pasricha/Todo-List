@@ -46,6 +46,7 @@ function displayAllProjects() {
     const projectButton = projectListItem.appendChild(
       document.createElement("button")
     );
+    projectButton.value = projectName;
     projectButton.textContent = projectName;
     projectButton.classList.add("project-button");
   }
@@ -138,6 +139,11 @@ function addNewTaskToProject() {
     selectedPriority.checked = false;
 
     document.querySelector(".task-details-form").close();
+    const selectedProjectInSidebar = document.querySelector(
+      `.project-button[value="${selectedProject.value}"]`
+    );
+    console.log(selectedProjectInSidebar);
+    selectedProjectInSidebar.click();
   });
 }
 
