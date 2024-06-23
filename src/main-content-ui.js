@@ -1,5 +1,6 @@
 import { getProjects } from "./projects";
 import { clickProjectInSidebar } from "./sidebar-ui";
+import { format } from "date-fns";
 
 function displayProjectInformation() {
   const defaultProjectName = "Personal";
@@ -95,7 +96,7 @@ function displayTasksInProject(projectName) {
       const taskDueDate = document.querySelector(
         `.task[data-index="${index}"] .task-due-date`
       );
-      taskDueDate.textContent = task.dueDate;
+      taskDueDate.textContent = format(task.dueDate, "PPPP");
 
       if (task.isCompleted) {
         const completedTask = document.querySelector(
