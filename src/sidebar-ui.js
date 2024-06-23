@@ -72,6 +72,8 @@ function addNewProjectToSidebar() {
     addNewProject(newProjectName);
     displayAllProjects();
 
+    clickProjectInSidebar(newProject);
+
     addProjectsToForm();
 
     // empty newProject input field to make space for next input
@@ -81,6 +83,13 @@ function addNewProjectToSidebar() {
     const newProjectPrompt = document.querySelector(".new-project-prompt");
     makeNewProjectPromptInvisible(newProjectPrompt);
   });
+}
+
+function clickProjectInSidebar(project) {
+  const selectedProjectInSidebar = document.querySelector(
+    `.project-button[value="${project.value}"]`
+  );
+  selectedProjectInSidebar.click();
 }
 
 function makeNewProjectPromptInvisible(newProjectPrompt) {
@@ -139,11 +148,7 @@ function addNewTaskToProject() {
     selectedPriority.checked = false;
 
     document.querySelector(".task-details-form").close();
-    const selectedProjectInSidebar = document.querySelector(
-      `.project-button[value="${selectedProject.value}"]`
-    );
-    console.log(selectedProjectInSidebar);
-    selectedProjectInSidebar.click();
+    clickProjectInSidebar(selectedProject);
   });
 }
 
