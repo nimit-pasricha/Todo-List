@@ -305,7 +305,7 @@ select {
 
 .project-title-and-add button {
   transition: 0.2s;
-  background-color: white;
+  background-color: var(--sidebar-font-color);
 }
 
 .project-title-and-add button:hover {
@@ -313,7 +313,7 @@ select {
 }
 
 .project-title-and-add button:hover svg {
-  fill: white;
+  fill: var(--sidebar-font-color);
 }
 
 .project-title-and-add svg {
@@ -337,9 +337,37 @@ select {
 }
 
 .task-controls button {
-  background-color: white;
+  background-color: var(--sidebar-font-color);
 }
 
 .task-controls svg {
   height: 1.4rem;
+}
+
+.task button {
+  transition: 0.1s;
+}
+
+.expand-button:hover {
+  background-color: #22c55e;
+}
+
+.expand-button:hover svg {
+  fill: var(--sidebar-font-color);
+}
+
+.edit-button:hover {
+  background-color: #f59e0b;
+}
+
+.edit-button:hover svg {
+  fill: var(--sidebar-font-color);
+}
+
+.delete-button:hover {
+  background-color: #ef4444;
+}
+
+.delete-button:hover svg {
+  fill: var(--sidebar-font-color);
 }
