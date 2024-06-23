@@ -38,10 +38,13 @@ function displayProjectInformation() {
 }
 
 function displayTasksInProject(projectName) {
+  moveCompletedTasksToEnd(projectName);
+
   const taskList = document.querySelector(".task-list");
   taskList.innerHTML = "";
 
   const projects = getProjects();
+  console.log(projects);
   const thisProjectsTasks = projects[projectName];
   let index = 0;
 
@@ -108,6 +111,17 @@ function displayTasksInProject(projectName) {
   }
 }
 
+function moveCompletedTasksToEnd(projectName) {
+  const projects = getProjects();
+  const tasksInProject = projects[projectName];
+  for (let i = tasksInProject.length - 1; i >= 0; i--) {
+    if (tasksInProject[i].isCompleted) {
+      const completedTask = tasksInProject.splice(i, 1)[0];
+      tasksInProject.push(completedTask);
+    }
+  }
+}
+
 function deleteTask() {
   const projects = getProjects();
   const deleteButtons = document.querySelectorAll(".delete-button");
@@ -135,7 +149,6 @@ function completeTask() {
       const taskToComplete = projects[projectToEdit][taskToCompleteIndex];
       taskToComplete.isCompleted = !taskToComplete.isCompleted;
       displayTasksInProject(projectToEdit);
-      console.log(projects);
     });
   });
 }
