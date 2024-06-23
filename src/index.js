@@ -23,6 +23,7 @@ import {
 } from "./sidebar-ui.js";
 import { displayProjectInformation } from "./main-content-ui.js";
 
+getProjects();
 addNewProjectWithAddButton();
 displayAllProjects();
 addProfilePictureToSidebar();

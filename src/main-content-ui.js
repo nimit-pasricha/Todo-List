@@ -1,6 +1,7 @@
 import { getProjects, moveCompletedTasksToEnd } from "./projects";
 import { clickProjectInSidebar } from "./sidebar-ui";
 import { format } from "date-fns";
+import { changeCompletedStatus } from "./todos";
 
 function displayProjectInformation() {
   const defaultProjectName = "Personal";
@@ -45,7 +46,6 @@ function displayTasksInProject(projectName) {
   taskList.innerHTML = "";
 
   const projects = getProjects();
-  console.log(projects);
   const thisProjectsTasks = projects[projectName];
   let index = 0;
 
@@ -136,8 +136,7 @@ function completeTask() {
       const projectToEdit = document.querySelector(
         ".project-title-and-add > h2"
       ).textContent;
-      const taskToComplete = projects[projectToEdit][taskToCompleteIndex];
-      taskToComplete.isCompleted = !taskToComplete.isCompleted;
+      changeCompletedStatus(projectToEdit, taskToCompleteIndex);
       displayTasksInProject(projectToEdit);
     });
   });
