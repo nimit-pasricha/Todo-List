@@ -319,3 +319,27 @@ select {
 .project-title-and-add svg {
   height: 2rem;
 }
+
+.task {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  grid-template-columns: 4fr 1fr;
+  align-items: center;
+}
+
+.task h3 {
+  font-size: 1.4rem;
+}
+
+.task-controls {
+  display: flex;
+  justify-self: end;
+}
+
+.task-controls button {
+  background-color: white;
+}
+
+.task-controls svg {
+  height: 1.4rem;
+}
