@@ -406,6 +406,10 @@ select {
   text-decoration-line: line-through;
 }
 
+.task.completed .edit-button {
+  outline: none;
+}
+
 .task.completed .edit-button:hover {
   background-color: var(--add-task-input-background);
 }
