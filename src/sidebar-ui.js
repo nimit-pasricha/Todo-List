@@ -173,8 +173,6 @@ function restartFormOnExit() {
   });
 }
 
-// TODO: Remove the new project prompt when it loses focus (by, for example, user clicking somewhere else)
-
 export {
   addProfilePictureToSidebar,
   addNewProjectWithAddButton,

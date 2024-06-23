@@ -197,10 +197,6 @@ hr {
   transition: 0.2s;
 }
 
-/* .project-list button {
-  TODO: stop sidebar from expanding if project name is too long
-} */
-
 dialog {
   border: solid 2px var(--sidebar-background-color);
   border-radius: 4px;

@@ -1,5 +1,5 @@
 import { getProjects } from "./projects.js";
-
+import { displayProjectInformation } from "./main-content-ui.js";
 import "./style.css";
 import {
   addNewProjectToSidebar,
@@ -11,7 +11,6 @@ import {
   promptUserForNewTask,
   restartFormOnExit,
 } from "./sidebar-ui.js";
-import { displayProjectInformation } from "./main-content-ui.js";
 
 getProjects();
 addNewProjectWithAddButton();

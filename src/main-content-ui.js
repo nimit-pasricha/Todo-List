@@ -3,7 +3,7 @@ import {
   moveCompletedTasksToEnd,
   orderTasksInPriority,
 } from "./projects";
-import { clickProjectInSidebar, displayAllProjects } from "./sidebar-ui";
+import { clickProjectInSidebar } from "./sidebar-ui";
 import { format } from "date-fns";
 import { changeCompletedStatus, deleteTodo } from "./todos";
 

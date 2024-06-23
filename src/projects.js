@@ -1,10 +1,8 @@
-// const projects = { Personal: [] };
 let projects;
 function getProjects() {
   if (!localStorage.getItem("projects")) {
     projects = { Personal: [] };
     localStorage.setItem("projects", JSON.stringify(projects));
-    console.log(JSON.stringify(projects));
   } else {
     projects = JSON.parse(localStorage.getItem("projects"));
   }
