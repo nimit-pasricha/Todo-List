@@ -405,3 +405,11 @@ select {
 .task.completed h3 {
   text-decoration-line: line-through;
 }
+
+.task.completed .edit-button:hover {
+  background-color: var(--add-task-input-background);
+}
+
+.task.completed .edit-button:hover svg {
+  fill: #f59e0b;
+}
