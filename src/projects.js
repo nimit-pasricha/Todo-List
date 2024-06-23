@@ -38,10 +38,32 @@ function moveCompletedTasksToEnd(projectName) {
   localStorage.setItem("projects", JSON.stringify(projects));
 }
 
+function orderTasksInPriority(projectName) {
+  const tasksInProject = projects[projectName];
+  tasksInProject.sort(compare);
+}
+
+function compare(a, b) {
+  switch (a.priority) {
+    case "Low":
+      return 1;
+    case "High":
+      return -1;
+    case "Medium":
+      if (b.priority === "High") {
+        return 1;
+      } else if (b.priority === "Low") {
+        return -1;
+      }
+      break;
+  }
+}
+
 export {
   getProjects,
   addNewProject,
   deleteProject,
   changeProjectName,
   moveCompletedTasksToEnd,
+  orderTasksInPriority,
 };

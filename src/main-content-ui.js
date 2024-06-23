@@ -1,4 +1,8 @@
-import { getProjects, moveCompletedTasksToEnd } from "./projects";
+import {
+  getProjects,
+  moveCompletedTasksToEnd,
+  orderTasksInPriority,
+} from "./projects";
 import { clickProjectInSidebar, displayAllProjects } from "./sidebar-ui";
 import { format } from "date-fns";
 import { changeCompletedStatus, deleteTodo } from "./todos";
@@ -41,6 +45,7 @@ function displayProjectInformation() {
 }
 
 function displayTasksInProject(projectName) {
+  orderTasksInPriority(projectName);
   moveCompletedTasksToEnd(projectName);
 
   const taskList = document.querySelector(".task-list");
