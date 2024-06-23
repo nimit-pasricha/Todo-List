@@ -88,6 +88,7 @@ function displayTasksInProject(projectName) {
       `.task[data-index="${index}"] .task-due-date`
     );
     taskDueDate.textContent = task.dueDate;
+    index++;
   });
 }
 
