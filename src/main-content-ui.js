@@ -1,7 +1,7 @@
 import { getProjects, moveCompletedTasksToEnd } from "./projects";
 import { clickProjectInSidebar } from "./sidebar-ui";
 import { format } from "date-fns";
-import { changeCompletedStatus } from "./todos";
+import { changeCompletedStatus, deleteTodo } from "./todos";
 
 function displayProjectInformation() {
   const defaultProjectName = "Personal";
@@ -113,7 +113,6 @@ function displayTasksInProject(projectName) {
 }
 
 function deleteTask() {
-  const projects = getProjects();
   const deleteButtons = document.querySelectorAll(".delete-button");
   deleteButtons.forEach((deleteButton) => {
     deleteButton.addEventListener("click", () => {
@@ -121,13 +120,27 @@ function deleteTask() {
       const projectToDeleteFrom = document.querySelector(
         ".project-title-and-add > h2"
       ).textContent;
-      projects[projectToDeleteFrom].splice(taskToDeleteIndex, 1);
+      deleteTodo(projectToDeleteFrom, taskToDeleteIndex);
       displayTasksInProject(projectToDeleteFrom);
     });
   });
 }
 
 function completeTask() {
+  const checkButtons = document.querySelectorAll(".check-button");
+  checkButtons.forEach((checkButton) => {
+    checkButton.addEventListener("click", () => {
+      const taskToCompleteIndex = checkButton.dataset.index;
+      const projectToEdit = document.querySelector(
+        ".project-title-and-add > h2"
+      ).textContent;
+      changeCompletedStatus(projectToEdit, taskToCompleteIndex);
+      displayTasksInProject(projectToEdit);
+    });
+  });
+}
+
+function editTask() {
   const projects = getProjects();
   const checkButtons = document.querySelectorAll(".check-button");
   checkButtons.forEach((checkButton) => {
