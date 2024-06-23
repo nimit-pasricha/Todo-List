@@ -17,4 +17,20 @@ function changeProjectName(oldProjectName, newProjectName) {
   delete projects[oldProjectName];
 }
 
-export { getProjects, addNewProject, deleteProject, changeProjectName };
+function moveCompletedTasksToEnd(projectName) {
+  const tasksInProject = projects[projectName];
+  for (let i = tasksInProject.length - 1; i >= 0; i--) {
+    if (tasksInProject[i].isCompleted) {
+      const completedTask = tasksInProject.splice(i, 1)[0];
+      tasksInProject.push(completedTask);
+    }
+  }
+}
+
+export {
+  getProjects,
+  addNewProject,
+  deleteProject,
+  changeProjectName,
+  moveCompletedTasksToEnd,
+};

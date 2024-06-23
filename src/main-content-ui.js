@@ -1,4 +1,4 @@
-import { getProjects } from "./projects";
+import { getProjects, moveCompletedTasksToEnd } from "./projects";
 import { clickProjectInSidebar } from "./sidebar-ui";
 import { format } from "date-fns";
 
@@ -109,17 +109,6 @@ function displayTasksInProject(projectName) {
 
     completeTask();
     deleteTask();
-  }
-}
-
-function moveCompletedTasksToEnd(projectName) {
-  const projects = getProjects();
-  const tasksInProject = projects[projectName];
-  for (let i = tasksInProject.length - 1; i >= 0; i--) {
-    if (tasksInProject[i].isCompleted) {
-      const completedTask = tasksInProject.splice(i, 1)[0];
-      tasksInProject.push(completedTask);
-    }
   }
 }
 
