@@ -64,7 +64,7 @@ function displayTasksInProject(projectName) {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                class="check-icon"
+                class="edit-icon"
               >
                 <title>pencil</title>
                 <path
@@ -108,6 +108,7 @@ function displayTasksInProject(projectName) {
     });
 
     completeTask();
+    editTask();
     deleteTask();
   }
 }
@@ -142,15 +143,35 @@ function completeTask() {
 
 function editTask() {
   const projects = getProjects();
-  const checkButtons = document.querySelectorAll(".check-button");
-  checkButtons.forEach((checkButton) => {
-    checkButton.addEventListener("click", () => {
-      const taskToCompleteIndex = checkButton.dataset.index;
+  const editButtons = document.querySelectorAll(".edit-button");
+  editButtons.forEach((editButton) => {
+    editButton.addEventListener("click", () => {
+      const taskToEditIndex = editButton.dataset.index;
       const projectToEdit = document.querySelector(
         ".project-title-and-add > h2"
       ).textContent;
-      changeCompletedStatus(projectToEdit, taskToCompleteIndex);
-      displayTasksInProject(projectToEdit);
+      const addTaskButton = document.querySelector(".add-task-button");
+      addTaskButton.click();
+
+      const taskToEdit = projects[projectToEdit][taskToEditIndex];
+      const taskTitleInput = document.querySelector("#task-title");
+      taskTitleInput.value = taskToEdit.title;
+
+      const taskDescriptionInput = document.querySelector("#task-description");
+      taskDescriptionInput.value = taskToEdit.description;
+
+      const taskDueDateInput = document.querySelector("#task-due-date");
+      taskDueDateInput.value = taskToEdit.dueDate;
+
+      const taskPriorityInput = document.querySelector(
+        `input[name="taskPriority"][value=${taskToEdit.priority}]`
+      );
+      taskPriorityInput.checked = true;
+
+      const projectNameInput = document.querySelector(
+        `option[value="${projectToEdit}"]`
+      );
+      projectNameInput.selected = "selected";
     });
   });
 }
